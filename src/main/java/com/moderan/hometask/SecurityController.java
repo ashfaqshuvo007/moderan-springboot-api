@@ -15,6 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SecurityController {
 
+    @GetMapping("/")
+    public Map<String, Object> index(){
+        Map<String, Object> resposnse = new LinkedHashMap<>();
+        resposnse.put("status",200);
+        resposnse.put("message", "The app is live");
+        return resposnse;
+    }
+
+
     @GetMapping("/auth")
     @ResponseBody
     public Map<String, Object> authenticate(@AuthenticationPrincipal AuthUserDetails user){
