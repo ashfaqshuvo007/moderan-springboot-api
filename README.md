@@ -80,7 +80,7 @@ This is just to handle some permissions for our main api routes.
 
 ### For Person package
 
-You can look [Person](src/main/java/com/moderan/hometask/person/)
+You can look at [Person Folder](src/main/java/com/moderan/hometask/person/)
 
 
 ## API routes 
@@ -92,8 +92,11 @@ I have used thunder client of Vscode but you use your browser or POSTMAN to test
 For authentication, we have used a Basic Auth (username & password): ```localhost:8888/auth``` return a user json object with details. You are authenticated.
 
 - Auth route setup
+
 ![Auth Setup](/DemoImages/authRoute.PNG)
+
 - Response
+
 ![Response](DemoImages/authResponse.PNG) 
 
 
@@ -102,9 +105,11 @@ For authentication, we have used a Basic Auth (username & password): ```localhos
 1. To save a Person ```"/person"``` **POST METHOD** permitted only to users with role **ADMIN**
 
 - POST url and input body. It takes a json in the following format
+
 ![Route url and input](DemoImages/postRoute.PNG)
 
 - Response: returns a new created Person Object with timestamp and id.
+
 ![response](DemoImages/postResponse.PNG)
 
 
@@ -112,9 +117,11 @@ For authentication, we have used a Basic Auth (username & password): ```localhos
 Let's say we want to retrieve all rows of data with 'John' in any column. We put a query parameter 'search' and its value as 'John'
 
 - GET url and input body. It takes a json in the following format
+
 ![Search url and input](DemoImages/searchRoute.PNG)
 
 - Response: returns a json list of all the records with 'John' 
+
 ![Response](DemoImages/searchResponse.PNG)
 
 ## Testing 
